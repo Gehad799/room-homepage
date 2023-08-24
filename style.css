@@ -1,0 +1,720 @@
+@font-face {
+    font-family: "leagueSpartan";
+    src: url("./fonts/League_Spartan/static/LeagueSpartan-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    /* border: 2px solid; */
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: leagueSpartan;
+
+}
+
+.firstRow {
+    display: flex;
+    width: 100%;
+    height: 32rem;
+}
+
+.photoSlides {
+    background-image: url("./images/desktop-image-hero-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 800px;
+}
+
+.largeNav {
+    padding: 60px 30px 0px 60px;
+    display: flex;
+    font-weight: 600;
+    color: white;
+
+}
+
+.largeNav .nav_items {
+    list-style: none;
+    font-size: 15px;
+    text-transform: lowercase;
+    margin-top: 0px;
+}
+
+.nav_items li {
+    display: inline-block;
+    margin-left: 25px;
+    position: relative;
+}
+
+.nav_items li:hover::after {
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 0.1rem;
+    top: 1.2rem;
+    left: 0.3rem;
+    background-color: white;
+}
+
+.nav_items li:hover {
+    cursor: pointer;
+}
+
+.mobileNav {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.mobileNavUl {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+.openIcon:hover {
+    cursor: pointer;
+}
+
+.mobileNav_items li {
+    display: inline-block;
+    font-size: 15px;
+    text-transform: lowercase;
+    font-weight: 800;
+    margin-left: 20px;
+    position: relative;
+}
+
+.mobileNav_items li:hover {
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(1px);
+}
+
+.hidden {
+    display: none;
+}
+
+.roomDescription {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+
+}
+
+.roomDescription h1 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+}
+
+.roomDescription p {
+    color: hsl(0, 0%, 63%);
+    line-height: 20px;
+    padding-right: 2rem;
+    margin-top: 0px;
+}
+
+.roomDescription a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-weight: 600;
+}
+
+a img {
+    margin-left: -10px;
+}
+
+.roomDescription a:hover {
+    cursor: pointer;
+    opacity: 0.4;
+
+
+}
+
+.sliderArrows {
+    display: flex;
+    margin-top: 450px;
+    margin-left: 100%;
+}
+
+.left-pre,
+.right-next {
+    background-color: black;
+    padding: 20px;
+}
+
+.left-pre:hover,
+.right-next:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 27%);
+}
+
+.secondRow {
+    width: 100%;
+    height: 20rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.leftImg {
+    background-image: url("./images/image-about-dark.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rightImg {
+    background-image: url("./images/image-about-light.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+}
+
+@font-face {
+    font-family: "leagueBold";
+    src: url("./fonts/League_Spartan/static/LeagueSpartan-ExtraBold.ttf");
+}
+
+.text h2 {
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: leagueBold;
+}
+
+.text p {
+    color: hsl(0, 0%, 63%);
+    line-height: 20px;
+}
+
+
+
+@media (max-width:2000px) and (min-width:1700px) {
+    .photoSlides {
+        width: 150rem;
+    }
+
+    .roomDescription {
+        width: 100rem;
+    }
+
+    .firstRow {
+        height: 40rem;
+    }
+
+    .secondRow {
+        height: 30rem;
+    }
+
+    .largeNav .nav_items {
+        font-size: 2rem;
+    }
+
+
+
+    .roomDescription {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+
+    .roomDescription p {
+        font-size: 2rem;
+        line-height: 35px;
+
+    }
+
+    .roomDescription a {
+        font-size: 2rem;
+    }
+
+    .text h2 {
+        font-size: 2rem;
+    }
+
+    .text p {
+        font-size: 1.5rem;
+        line-height: 35px;
+    }
+
+}
+
+@media(max-width:1699px) and (min-width:1620px) {
+    .photoSlides {
+        width: 60rem;
+    }
+
+    .roomDescription {
+        width: 60rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-top: 1rem;
+    }
+
+    .roomDescription h1 {
+        font-size: 4rem;
+    }
+
+    .roomDescription p {
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+
+    .roomDescription a {
+        font-size: 1.5rem;
+    }
+
+    .sliderArrows {
+        margin-top: 355px;
+    }
+
+    /* .left-pre,
+    .right-next {
+        padding: 30px;
+    } */
+}
+
+@media(max-width:1619px) and (min-width:1480px) {
+    .firstRow {
+        height: 33rem;
+    }
+
+    .photoSlides {
+        width: 60rem;
+    }
+
+    .roomDescription {
+        width: 50rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-top: 0.5rem;
+    }
+
+    .roomDescription h1 {
+        font-size: 4rem;
+    }
+
+    .roomDescription p {
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+
+    .roomDescription a {
+        font-size: 1.5rem;
+    }
+
+    .sliderArrows {
+        margin-top: 370px;
+    }
+}
+
+@media(max-width:1479px) {
+    .sliderArrows {
+        margin-top: 355px;
+    }
+}
+
+@media(max-width:1369px) and (min-width:1255px) {
+
+    .photoSlides {
+        width: 50rem;
+    }
+
+    .roomDescription {
+        width: 30rem;
+    }
+
+    .secondRow {
+        height: 16rem;
+    }
+
+    .sliderArrows {
+        margin-top: 365px;
+    }
+
+    .left-pre,
+    .right-next {
+        padding: 15px;
+
+    }
+
+}
+
+@media(max-width:1254px) and (min-width:1120px) {
+    .firstRow {
+        height: 25rem;
+    }
+
+    .photoSlides {
+        width: 40rem;
+    }
+
+    .roomDescription {
+        width: 30rem;
+        padding-top: 0rem;
+    }
+
+    .roomDescription h1 {
+        font-size: 2.5rem;
+    }
+
+    .secondRow {
+        height: 15rem;
+    }
+
+    .sliderArrows {
+        margin-top: 243px;
+    }
+}
+
+@media(max-width:1119px) {
+    .firstRow {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 700px 500px;
+        height: 1200px;
+    }
+
+    .photoSlides {
+        width: 100%;
+    }
+
+    .roomDescription {
+        width: 100%;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-top: 2rem;
+
+    }
+
+    .roomDescription h1 {
+        font-size: 4.5rem;
+    }
+
+    .roomDescription p {
+        font-size: 1.5rem;
+        line-height: 25px;
+    }
+
+    .roomDescription a {
+        font-size: 1.5rem;
+    }
+
+    .leftImg {
+        width: 100%;
+    }
+
+    .rightImg {
+        width: 100%;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .sliderArrows {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    .left-pre,
+    .right-next {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .secondRow {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        height: 1500px;
+    }
+
+    .text {
+        display: block;
+        padding-top: 5rem;
+
+    }
+
+    .text h2 {
+        font-size: 3rem;
+    }
+
+    .text p {
+        font-size: 2rem;
+        line-height: 30px;
+    }
+
+
+
+}
+
+@media(max-width:989px) {
+    .firstRow {
+        grid-template-rows: 600px 300px;
+        height: 900px;
+    }
+
+
+    .roomDescription {
+        padding-top: 0rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .roomDescription h1 {
+        font-size: 3rem;
+    }
+
+    .roomDescription p {
+        font-size: 1rem;
+    }
+
+    .roomDescription a {
+        font-size: 1.5rem;
+    }
+
+    .text h2 {
+        font-size: 2rem;
+    }
+
+    .text p {
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+
+
+
+}
+
+@media(max-width:850px) {
+    .firstRow {
+        height: 800px;
+        grid-template-rows: 500px 300px;
+    }
+
+    .roomDescription {
+        padding-top: 1rem;
+    }
+
+    .roomDescription h1 {
+        font-size: 2rem;
+    }
+
+    .secondRow {
+        height: 1200px;
+    }
+}
+
+@media(min-width:711px) {
+    .mobileNav {
+        display: none;
+    }
+
+}
+
+@media(max-width:710px) {
+    .firstRow {
+        grid-template-rows: 400px 300px;
+    }
+
+    .text h2 {
+        font-size: 1.5rem;
+    }
+
+    .text p {
+        font-size: 1rem;
+    }
+
+    .largeNav {
+        display: none;
+    }
+
+}
+
+@media(max-width:560px) {
+    .firstRow {
+        grid-template-rows: 400px 300px;
+    }
+
+
+
+    .secondRow {
+        height: 1000px;
+    }
+
+    .roomDescription {
+        padding-top: 2rem;
+    }
+}
+
+@media(max-width:500px) {
+    .firstRow {
+        grid-template-rows: 300px 300px;
+    }
+
+    .roomDescription {
+        padding-top: 4rem;
+    }
+
+    .text {
+        padding-top: 2rem;
+    }
+
+
+    .text h2 {
+        font-size: 1rem;
+    }
+
+    .text p {
+        font-size: 0.8rem;
+    }
+
+    .left-pre,
+    .right-next {
+        padding: 10px 20px;
+    }
+
+    .secondRow {
+        height: 900px;
+    }
+}
+
+@media(max-width:450px) {
+    .roomDescription h1 {
+        font-size: 1.5rem;
+    }
+
+    .roomDescription p {
+        font-size: 0.8rem;
+        line-height: 18px;
+    }
+
+    .roomDescription a {
+        margin-top: 3rem;
+    }
+
+    .text {
+        padding-top: 4rem;
+    }
+
+    .text p {
+        font-size: 0.8rem;
+        line-height: 17px;
+    }
+}
+
+@media(max-width:400px) {
+    .secondRow {
+        height: 700px;
+    }
+
+    .text {
+        padding-top: 2rem;
+    }
+
+    .text h2 {
+        font-size: 0.8rem;
+    }
+
+    .text p {
+        font-size: 0.7rem;
+    }
+
+    .roomDescription {
+        padding-top: 1rem;
+    }
+
+    .roomDescription p {
+        font-size: 0.5rem;
+        line-height: 10px;
+    }
+
+    .roomDescription a {
+        font-size: 1rem;
+        margin-top: 0.6rem;
+    }
+
+    .firstRow {
+        height: 500px;
+        grid-template-rows: 250px 250px;
+    }
+}
+
+@media(max-width:345px) {
+    .roomDescription a {
+        font-size: 0.8rem;
+        letter-spacing: 8px;
+    }
+
+    .roomDescription {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .right-next,
+    .left-pre {
+        padding: 10px;
+    }
+}
+
+@media(max-width:315px) {
+    .firstRow {
+        height: 400px;
+        grid-template-rows: 200px 200px;
+    }
+
+    .roomDescription {
+        padding-top: 0.4rem;
+    }
+
+    .secondRow {
+        height: 600px;
+    }
+
+    .text {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .text h2 {
+        letter-spacing: 2px;
+    }
+
+    .text p {
+        font-size: .5rem;
+        line-height: 10px;
+    }
+
+}
